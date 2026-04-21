@@ -1,5 +1,8 @@
-print('SBA System Ready')
-print("making a conflict")
-print("created branch2")
-print("changes on branch2")
-print("jelly")
+FILE_NAME = "sample.txt"
+
+text = ""
+try:
+    text = open(FILE_NAME, "r")
+except:
+    print("CANT FIND THE FILE")
+print(text)
