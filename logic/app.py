@@ -1,4 +1,5 @@
-FILE_NAME = "sample.txt"
+import datetime
+FILE_NAME = "./sample.txt"
 
 text = ""
 try:
@@ -6,3 +7,8 @@ try:
 except:
     print("CANT FIND THE FILE")
 print(text)
+
+log = f"output: {text}"
+
+with open("log.txt", "a") as f:
+    f.write(f"{datetime.datetime.now()} {log}")
